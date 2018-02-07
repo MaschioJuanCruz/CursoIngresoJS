@@ -4,12 +4,8 @@
 */
 function Mostar()
 {
-	var nombre;
-	nombre = prompt ("Por favor ingresa tu nombre ");
-	document.getElementById('elNombre').value = nombre
+var nombre;
+nombre=prompt("Por favor ingrese su nombre");
+document.getElementById('elNombre').value=nombre;
 }
-/* Cuando en un getElement del comando nombre la variable
-nombre se coloca antes del document el contenido del campo
-se asigna a la variable, si la variable se pone al final,
-el contenido de la variable se muestra en el cuadro de diálogo*/
 
