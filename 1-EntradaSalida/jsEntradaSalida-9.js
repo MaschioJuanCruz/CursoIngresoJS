@@ -4,22 +4,13 @@ mostrar el importe con un aumento del 10 %
 en el cuadro de texto "RESULTADO".*/
 function MostrarAumento()
 {
-
-/*
-	var sueldo;
+	var sueldoBase;
+	var aumento;
 	var sueldoConAumento;
-	sueldo=100;
-	sueldoConAumento= sueldo*1.1;
-
-	alert(sueldoConAumento)*/
-
-	var sueldo;
-	var sueldoConAumento;
-
-	sueldo = document.getElementById('sueldo').value;
-	sueldo = parseInt(sueldo);
-	//alert(sueldo);
-
-	sueldoConAumento = sueldo*1.1;
-	document.getElementById('resultado').value=sueldoConAumento;
+	sueldoBase = document.getElementById('sueldo').value;
+	sueldoBase = parseInt(sueldoBase);
+	aumento=sueldoBase/100*10;
+	sueldoConAumento = sueldoBase+aumento;
+	document.getElementById('resultado').value = sueldoConAumento;
+	
 }

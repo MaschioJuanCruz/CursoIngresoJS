@@ -4,23 +4,13 @@ mostrar el resto entre el dividendo y el divisor.
 ej.: "El resto es 0 ."*/
 function SacarResto()
 {
-	/* El símbolo % devuelve el resto de una división
-	se llama módulo*/
-
-	//var resultado;
-	//resultado=10%2;
-	//alert(resultado);
-	//resultado=2%10;
-	//alert(resultado);
-
 	var dividendo;
 	var divisor;
-
+	var resto;
 	dividendo = document.getElementById('numeroDividendo').value;
 	divisor = document.getElementById('numeroDivisor').value;
-
-
-	// terminar ejercicio
-
-
+	dividendo = parseInt(dividendo);
+	divisor = parseInt(divisor);
+	resto = dividendo%divisor;
+	alert("El resto de esta división es: "+resto);
 }
