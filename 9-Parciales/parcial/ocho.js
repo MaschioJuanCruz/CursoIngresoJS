@@ -19,6 +19,8 @@ function Mostrar()
 	var sexo;
 	var contadorDeMujeres;
 	var contadorDeVarones;
+	var varonesDesaprobados;
+	var MujeresDesaprobadas;
 
 	acumuladorDeNotas=0;
 	seguir="";
@@ -27,6 +29,8 @@ function Mostrar()
 	acumuladorDeNotas=0;
 	contadorDeMujeres=0;
 	contadorDeVarones=0;
+	varonesDesaprobados=0;
+	MujeresDesaprobadas=0;
 
 	while (seguir!="no")
 	{
@@ -39,7 +43,7 @@ function Mostrar()
 			nota=prompt("Ingrese su nota: ");
 			nota=parseInt(nota);
 			}
-		sexo=prompt("Ingrese se sexo f o m");
+			sexo=prompt("Ingrese se sexo f o m");
 			while (sexo !="f" && sexo !="m")
 			{
 				sexo=prompt("Ingrese se sexo f o m");
@@ -52,6 +56,15 @@ function Mostrar()
 				{
 				contadorDeVarones=contadorDeVarones+1;	
 				}
+		if (nota>4 && sexo=="f")
+		{
+			MujeresDesaprobadas=MujeresDesaprobadas+1;
+		}
+		if (nota<4 && sexo=="m")
+		{
+			varonesDesaprobados=varonesDesaprobados+1;
+		}
+
 		
 		
 		seguir=prompt("Ingrese no para salir");
@@ -64,6 +77,7 @@ function Mostrar()
 	document.write("<br>El promedio es :"+promedio);
 	document.write("<br> La cantidad de Mujeres es: "+contadorDeMujeres);
 	document.write("<br> La cantidad de Varones es: "+contadorDeVarones);
+	document.write("<br> Los varones Desaprobados son :"+varonesDesaprobados);
 }
 
 /*
